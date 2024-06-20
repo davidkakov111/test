@@ -1,13 +1,14 @@
 {
     "version": 2,
     "builds": [{"src": "./index.js", "use": "@vercel/node"}],
-    "routes": {
-        "/voice": {
-            "methods": ["GET", "POST"],
-            "headers": {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST"
-            }
+    "routes": [
+      {
+        "src": "/voice",
+        "methods": ["POST"],
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "POST"
         }
-    }  
+      }
+    ] 
 }
